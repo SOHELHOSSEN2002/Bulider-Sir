@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Roboto', sans-serif;
+  --font-serif: 'Roboto', sans-serif;
+}
+
+@layer base {
+  :root {
+    --color-bg: #FFF9F2;
+    --color-text: #010736;
+    --color-card: #FFFFFF;
+    --color-card-elevated: #F9F2E8;
+    --color-border: rgba(1, 7, 54, 0.12);
+    --color-primary: #010736;
+    --color-gold: #C69255;
+  }
+
+  html, body {
+    background-color: #FFF9F2;
+    color: #010736;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  input, button, textarea, select {
+    font-family: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Roboto', sans-serif;
+    color: #010736;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2D7C8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #010736;
+}
+
+/* Glass and glow utilities for #FFF9F2 */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(1, 7, 54, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(1, 7, 54, 0.12);
+}
+
+.glow-border:hover {
+  box-shadow: 0 10px 30px rgba(1, 7, 54, 0.08);
+}
+
+.bg-pattern {
+  background-image: radial-gradient(rgba(1, 7, 54, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
